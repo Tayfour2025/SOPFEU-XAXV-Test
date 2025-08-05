@@ -6,7 +6,7 @@
   <title>SOPFEU Widget</title>
   <style>
     #sopfeu-widget-container {
-      max-width: 400px !important;   /* largeur maximale du widget */
+      max-width: 800px !important;   /* largeur maximale du widget */
       height: 350px;                 /* hauteur du widget, modifie selon besoin */
       margin: 0 auto;                /* centrer le widget */
       overflow: hidden;              /* masque le débordement éventuel */
@@ -28,7 +28,8 @@
   </style>
 </head>
 <body>
-  <div data-sopfeu-lng="fr_CA" data-sopfeu-media="17" data-sopfeu-responsive="true" id="sopfeu-widget-container"><span id="sopfeu-widget-loader"></span></div><script src="https://www.sopfeu.qc.ca/sopfeu-widget.js"></script>
+  <div data-sopfeu-lng="fr_CA" data-sopfeu-media="17" data-sopfeu-responsive="true" id="sopfeu-widget-container">
+    <span id="sopfeu-widget-loader"></span></div><script src="https://www.sopfeu.qc.ca/sopfeu-widget.js"></script>
   <script>
     function hideVoirSurLaCarteParent() {
       var links = document.querySelectorAll('#sopfeu-widget-container a');
