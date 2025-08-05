@@ -6,17 +6,23 @@
   <title>SOPFEU Widget</title>
   <style>
     #sopfeu-widget-container {
-      max-width: 400px;   /* largeur maximale du widget */
-      height: 350px;      /* hauteur du widget, modifie selon besoin */
-      margin: 0 auto;     /* centrer le widget */
-      overflow: hidden;   /* masque le débordement éventuel */
-      font-size: 18px;    /* <-- Ajoute cette ligne pour changer la taille du texte */
+      max-width: 400px !important;   /* largeur maximale du widget */
+      height: 350px;                 /* hauteur du widget, modifie selon besoin */
+      margin: 0 auto;                /* centrer le widget */
+      overflow: hidden;              /* masque le débordement éventuel */
+      font-size: 24px !important;    /* taille principale du texte */
+    }
+    #sopfeu-widget-container * {
+      font-size: 16px !important;    /* taille du texte pour le contenu interne */
     }
     @media (max-width: 450px) {
       #sopfeu-widget-container {
-        max-width: 100%;
-        height: 250px;
-        font-size: 16px;  /* <-- Taille du texte sur petits écrans */
+        max-width: 100% !important;
+        height: 250px !important;
+        font-size: 32px !important;  /* taille principale du texte sur petits écrans */
+      }
+      #sopfeu-widget-container * {
+        font-size: 24px !important;  /* taille du texte interne sur petits écrans */
       }
     }
   </style>
