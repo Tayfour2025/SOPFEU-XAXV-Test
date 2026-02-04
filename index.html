@@ -4,19 +4,28 @@
   <meta charset="utf-8">
 </head>
 
-<body onload="start()" style="margin:0;background:black;">
+<body onload="start()" style="margin:0; background:black; overflow:hidden;">
 
-  <!-- Static text to prove rendering -->
-  <div style="color:white;font-family:Arial;font-size:40px;padding:20px;">
-    CLOCK TEST
-  </div>
+  <div id="container" style="
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+    font-family: Arial, sans-serif;
+    color:white;
+  ">
+    <div id="title" style="font-size:48px; font-weight:bold; margin-bottom:20px;">
+      Terrebonne Time
+    </div>
 
-  <div id="time" style="color:white;font-family:Arial;font-size:90px;font-weight:bold;padding:20px;">
-    --:--:--
-  </div>
+    <div id="time" style="font-size:110px; font-weight:bold; line-height:1;">
+      --:--:--
+    </div>
 
-  <div id="date" style="color:white;font-family:Arial;font-size:40px;padding:0 20px 20px 20px;">
-    ----
+    <div id="date" style="font-size:44px; margin-top:15px;">
+      ----
+    </div>
   </div>
 
 <script type="text/javascript">
@@ -24,6 +33,7 @@
 
   function tick() {
     var now = new Date();
+
     var hh = pad2(now.getHours());
     var mm = pad2(now.getMinutes());
     var ss = pad2(now.getSeconds());
